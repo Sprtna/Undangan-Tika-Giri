@@ -254,3 +254,12 @@ function tampilkanUcapan(nama, status, pesan, isNew = false) {
         container.appendChild(card);
     }
 }
+window.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const namaTamu = urlParams.get("to");
+    const elementTo = document.querySelector(".to");
+
+    if (namaTamu && elementTo) {
+        elementTo.innerText = namaTamu;
+    }
+});
