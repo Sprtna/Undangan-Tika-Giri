@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Tika & Giri</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Audio Musik -->
+    <audio id="lagu" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- Sampul Depan (Cover Overlay) -->
+    <div id="cover" class="cover">
+        <div class="cover-content">
+            <h1>Tika & Giri</h1>
+            <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <button id="btn-buka" onclick="bukaUndangan()">Buka Undangan</button>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA -->
+    <main id="konten" class="hidden">
+        
+        <!-- 1. MEMPELAI (Dengan Salam Pilihan 1) -->
+        <section class="mempelai-section">
+            <div style="text-align: center; margin-bottom: 25px;">
+                <p style="font-size: 0.9rem; color: #666; font-weight: 600; margin-bottom: 8px;">
+                    Maha Suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan.
+                </p>
+                <p style="font-size: 0.85rem; color: #555; line-height: 1.5; max-width: 480px; margin: 0 auto;">
+                    Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri hari bahagia pernikahan kami:
+                </p>
+            </div>
+
+            <div class="mempelai-card">
+                <h2 class="mempelai-name">Tika Nur Safitri</h2>
+                <p class="parents">Putri ketiga dari<br><strong>Bapak Irpan (Alm.) & Ibu Nani</strong></p>
+            </div>
+
+            <div class="divider">&</div>
+
+            <div class="mempelai-card">
+                <h2 class="mempelai-name">Nugiri Muktiansah</h2>
+                <p class="parents">Putra kedua dari<br><strong>Bapak Asep Suhendar & Ibu Een Hindasah (Almh.)</strong></p>
+            </div>
+        </section>
+
+        <!-- 2. ACARA -->
+        <section class="event-section">
+            <p class="intro-text">Insya Allah akan dilaksanakan pada :</p>
+
+            <div class="date-badge">
+                MINGGU, 11 OKTOBER 2026
+            </div>
+
+            <!-- COUNTDOWN TIMER (SUDAH DIPINDAHKAN KE SINI DENGAN STYLE JELAS) -->
+            <div id="countdown-container" style="display: flex; justify-content: center; gap: 10px; margin: 25px 0;">
+                <div style="background: #333; border: 1px solid #555; padding: 10px 14px; border-radius: 10px; min-width: 60px; text-align: center; color: #fff;">
+                    <span id="cd-hari" style="font-size: 1.4rem; font-weight: bold; display: block;">00</span>
+                    <small style="font-size: 0.75rem;">Hari</small>
+                </div>
+                <div style="background: #333; border: 1px solid #555; padding: 10px 14px; border-radius: 10px; min-width: 60px; text-align: center; color: #fff;">
+                    <span id="cd-jam" style="font-size: 1.4rem; font-weight: bold; display: block;">00</span>
+                    <small style="font-size: 0.75rem;">Jam</small>
+                </div>
+                <div style="background: #333; border: 1px solid #555; padding: 10px 14px; border-radius: 10px; min-width: 60px; text-align: center; color: #fff;">
+                    <span id="cd-menit" style="font-size: 1.4rem; font-weight: bold; display: block;">00</span>
+                    <small style="font-size: 0.75rem;">Menit</small>
+                </div>
+                <div style="background: #333; border: 1px solid #555; padding: 10px 14px; border-radius: 10px; min-width: 60px; text-align: center; color: #fff;">
+                    <span id="cd-detik" style="font-size: 1.4rem; font-weight: bold; display: block;">00</span>
+                    <small style="font-size: 0.75rem;">Detik</small>
+                </div>
+            </div>
+
+            <div class="event-details">
+                <div class="event-item">
+                    <h3>AKAD NIKAH</h3>
+                    <p>Pukul 09.00 s/d 10.00</p>
+                </div>
+                
+                <div class="event-divider"></div>
+
+                <div class="event-item">
+                    <h3>RESEPSI</h3>
+                    <p>Pukul 11.00 s/d 14.00</p>
+                </div>
+            </div>
+
+            <div class="location-box">
+                <div class="home-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                        <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.694 8.695a.75.75 0 1 1-1.06 1.06L20 12.526V20.25A2.25 2.25 0 0 1 17.75 22.5H6.25A2.25 2.25 0 0 1 4 20.25v-7.724l-1.164 1.164a.75.75 0 1 1-1.06-1.06l8.694-8.695Z" />
+                    </svg>
+                </div>
+                <p class="address">
+                    <strong>JL. SAMARANG KP. NGONTONG</strong><br>
+                    RT.03 / RW.13 Gang Ketupat<br>
+                    Desa Rancabango Kec. Tarogong Kaler
+                </p>
+                <a href="https://maps.app.goo.gl/J9Noc1RwyDxLVzFB6" target="_blank" class="btn-map">Petunjuk Lokasi</a>
+            </div>
+        </section>
+
+        <!-- 3. KISAH KAMI -->
+        <section class="story">
+            <h2>Kisah Kami</h2>
+            <div class="story-container">
+                <div class="story-card">
+                    <div class="img-box">
+                        <img src="1.jpeg" alt="Pertemuan Pertama" onclick="openModal(this)">
+                    </div>
+                    <div class="story-text">
+                        <span class="year">2020 — Awal Menyapa</span>
+                        <p>Tak pernah terbayang bahwa sebuah lalu lintas maya menjadi awal kisah ini bermula. Lewat perantara layar kecil, percakapan hangat membawa kami makin dekat, merajut rasa yang tumbuh tanpa nama, sebelum akhirnya jarak dan waktu memisahkan jalan kami sejenak.</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="img-box">
+                        <img src="2.jpeg" alt="Resmi Bersama" onclick="openModal(this)">
+                    </div>
+                    <div class="story-text">
+                        <span class="year">23 Agustus 2021 — Takdir yang Kembali</span>
+                        <p>Setahun jeda berlalu, takdir rupanya belum selesai menuliskan cerita. Garis kehidupan membawa kami kembali bersua dalam hangat yang sama. Di tanggal 23 Agustus 2021, dua hati yang sempat berkelana ini akhirnya memutuskan untuk saling mengikat janji dan melangkah dalam satu pelukan ikatan cinta.</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="img-box">
+                        <img src="3.jpeg" alt="Momen Keseriusan" onclick="openModal(this)">
+                    </div>
+                    <div class="story-text">
+                        <span class="year">26 Oktober 2025 — Langkah Keseriusan</span>
+                        <p>Empat tahun mengarungi samudra tawa dan lika-liku bersama, kedewasaan menuntun kami pada sebuah kepastian. Tepat pada 26 Oktober 2025, kami mantap memeluk masa depan, melangkah menuju gerbang yang lebih serius untuk saling mendampingi seumur hidup.</p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="img-box">
+                        <img src="4.jpeg" alt="Menuju Hari Bahagia" onclick="openModal(this)">
+                    </div>
+                    <div class="story-text">
+                        <span class="year">2026 — Ikatan Suci</span>
+                        <p>Kini, kisah panjang yang terajut penuh makna itu sampai pada puncaknya. Dengan ridho Allah dan kehangatan do'a restu dari orang tua serta sahabat, kami siap mengukir janji suci pernikahan, melayari kehidupan baru sebagai pasangan suami istri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GALERI METRO UI -->
+        <section class="gallery-section">
+            <h2>Galeri Momen</h2>
+            <p>Usap atau ketuk foto untuk melihat lebih jelas</p>
+
+            <div class="metro-grid">
+                <div class="metro-item item-a" onclick="openModal('a.jpeg', 'Momen Kebersamaan A')">
+                    <img src="a.jpeg" alt="Foto A" loading="lazy">
+                    <div class="metro-overlay"><span>a</span></div>
+                </div>
+                <div class="metro-item item-b" onclick="openModal('b.jpeg', 'Momen Kebersamaan B')">
+                    <img src="b.jpeg" alt="Foto B" loading="lazy">
+                    <div class="metro-overlay"><span>b</span></div>
+                </div>
+                <div class="metro-item item-c" onclick="openModal('c.jpeg', 'Momen Kebersamaan C')">
+                    <img src="c.jpeg" alt="Foto C" loading="lazy">
+                    <div class="metro-overlay"><span>c</span></div>
+                </div>
+                <div class="metro-item item-d" onclick="openModal('d.jpeg', 'Momen Kebersamaan D')">
+                    <img src="d.jpeg" alt="Foto D" loading="lazy">
+                    <div class="metro-overlay"><span>d</span></div>
+                </div>
+                <div class="metro-item item-e" onclick="openModal('e.jpeg', 'Momen Kebersamaan E')">
+                    <img src="e.jpeg" alt="Foto E" loading="lazy">
+                    <div class="metro-overlay"><span>e</span></div>
+                </div>
+                <div class="metro-item item-f" onclick="openModal('f.jpeg', 'Momen Kebersamaan F')">
+                    <img src="f.jpeg" alt="Foto F" loading="lazy">
+                    <div class="metro-overlay"><span>f</span></div>
+                </div>
+                <div class="metro-item item-g" onclick="openModal('g.jpeg', 'Momen Kebersamaan G')">
+                    <img src="g.jpeg" alt="Foto G" loading="lazy">
+                    <div class="metro-overlay"><span>g</span></div>
+                </div>
+                <div class="metro-item item-h" onclick="openModal('h.jpeg', 'Momen Kebersamaan H')">
+                    <img src="h.jpeg" alt="Foto H" loading="lazy">
+                    <div class="metro-overlay"><span>h</span></div>
+                </div>
+                <div class="metro-item item-i" onclick="openModal('i.jpeg', 'Momen Kebersamaan I')">
+                    <img src="i.jpeg" alt="Foto I" loading="lazy">
+                    <div class="metro-overlay"><span>i</span></div>
+                </div>
+                <div class="metro-item item-j" onclick="openModal('j.jpeg', 'Momen Kebersamaan J')">
+                    <img src="j.jpeg" alt="Foto J" loading="lazy">
+                    <div class="metro-overlay"><span>j</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. AYAT AL-QURAN (AR-RUM: 21) -->
+        <section class="quran-section">
+            <div class="quran-card">
+                <p class="arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ</p>
+                <p class="translation">
+                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+                </p>
+                <span class="surah-title">(QS. Ar-Rum: 21)</span>
+            </div>
+        </section>
+
+        <!-- 6. AMPLOP DIGITAL -->
+        <section class="gift-section">
+            <h2>Amplop Digital</h2>
+            <p>Doa restu Anda merupakan karunia terindah bagi kami. Namun jika ingin memberikan tanda kasih, Anda dapat menyalurkannya melalui :</p>
+
+            <div class="bank-card">
+                <img src="dana.png" alt="DANA" class="bank-logo">
+                <p class="account-number" id="rek-ewallet">083822340350</p>
+                <p class="account-name">a.n. Tika NS</p>
+                <button class="btn-copy" onclick="copyText('rek-ewallet')">Salin Nomor DANA</button>
+            </div>
+
+            <a href="https://wa.me/6283822340350?text=Halo%20Tika%20%26%20Giri,%20saya%20sudah%20mengirimkan%20hadiah%20pernikahan%20via%20DANA.%20Terima%20kasih!" 
+               target="_blank" class="btn-confirm-wa">
+                Konfirmasi Transfer via WhatsApp
+            </a>
+        </section>
+
+        <!-- 7. RSVP & BUKU UCAPAN -->
+        <section class="rsvp-section">
+            <h2>Konfirmasi Kehadiran</h2>
+            <p>Isi form di bawah ini untuk membantu kami menyiapkan tempat terbaik :</p>
+
+            <form id="rsvp-form">
+                <div class="form-group">
+                    <input type="text" id="rsvp-nama" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <select id="rsvp-status" required>
+                        <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Tidak Hadir">Tidak Hadir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="rsvp-jumlah" placeholder="Jumlah Tamu" min="1" max="5" value="1">
+                </div>
+                <div class="form-group">
+                    <textarea id="rsvp-pesan" rows="3" placeholder="Ucapan & Doa untuk Mempelai" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Ucapan</button>
+            </form>
+
+            <div class="comments-container" id="comments-container">
+                <!-- Ucapan pengunjung muncul di sini -->
+            </div>
+        </section>
+
+        <!-- 8. PENUTUP & DOA -->
+        <section class="closing-section">
+            <p class="closing-text">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.
+            </p>
+            
+            <div class="guest-prayer">
+                <p>Semoga Allah SWT membalas segala kebaikan, kelapangan hati, dan doa tulus yang Anda berikan dengan keberkahan yang berlipat ganda.</p>
+            </div>
+
+            <p class="warm-regards">Kami yang berbahagia,</p>
+            <h3 class="couple-names">Tika & Giri</h3>
+        </section>
+
+    </main>
+
+    <!-- Modal untuk Gambar Interaktif Fullscreen -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
